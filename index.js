@@ -12,4 +12,8 @@ class Warrior {
     getHp() {
         return this.hp;
     }
+
+    getHitPoints() {
+        return this.hitPoints;
+    }
 }
