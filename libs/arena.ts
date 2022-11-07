@@ -1,4 +1,6 @@
-class Arena {
+import {Warrior} from "./warrior";
+
+export class Arena {
     constructor(warrior1, warrior2) {
         if (!(warrior1 instanceof Warrior)) {
             throw new Error('Warrior1 must be an instance of Warrior class!');
