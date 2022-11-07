@@ -59,3 +59,6 @@ class Arena {
         return null;
     }
 }
+
+const fighter1 = new Warrior('Baba Yaga', 9,120);
+const fighter2 = new Warrior('Babavoss', 7, 140);
