@@ -36,4 +36,15 @@ class Arena {
             throw new Error('Warrior2 must be an instance of Warrior class!');
         }
     }
+
+    fight() {
+        const attacker = this.activeWarrior === 1 ? this.warrior1 : this.warrior2;
+        const attacked = this.activeWarrior === 1 ? this.warrior2 : this.warrior1;
+
+        const attackingHitPoints = attacker.getHitPoints();
+        const attackedOldHp = attacked.getHp();
+        const attackedNewHp = attackedoldHp - attackingHitPoints;
+
+        console.log(attacker.getName(), 'is attacking', attacked.getName(), 'and now he has', attackedNewHp, 'hp');
+    }
 }
