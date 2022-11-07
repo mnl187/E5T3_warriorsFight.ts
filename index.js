@@ -16,4 +16,15 @@ class Warrior {
     getHitPoints() {
         return this.hitPoints;
     }
+
+    getName() {
+        return this.name;
+    }
+
+    levelUp() {
+        this.hitPoints += 1.1;
+        this.hp += 1.1;
+
+
+    }
 }
