@@ -43,8 +43,19 @@ class Arena {
 
         const attackingHitPoints = attacker.getHitPoints();
         const attackedOldHp = attacked.getHp();
-        const attackedNewHp = attackedoldHp - attackingHitPoints;
+        const attackedNewHp = attackedOldHp - attackingHitPoints;
 
         console.log(attacker.getName(), 'is attacking', attacked.getName(), 'and now he has', attackedNewHp, 'hp');
+
+        attacked.setHp(attackedNewHp);
+
+        this.activeWarrior = this. activeWarrior === 1 ? 2 : 1;
+
+        if (attackedNewHp <= 0) {
+            console.log(attacked.getName(), 'goes to Valhalla');
+            return attacker;
+        }
+
+        return null;
     }
 }
